@@ -80,9 +80,9 @@ random name chosen from the Flatiron Baby Name book Assume that the API returns
 ```javascript
 var baby_name;
 
-fetch("http://flatiron-baby-name.example.com").
-  then(response => response.json()).
-  then(data => baby_name = data.name);
+fetch("http://flatiron-baby-name.example.com")
+  .then(response => response.json())
+  .then(data => baby_name = data.name);
 
 
 console.log(`I've named my kid, ${baby_name}`);
@@ -100,13 +100,13 @@ random Integer. On this particular run it will return `2` and `3`.
 ```javascript
 var addends = [];
 
-fetch("http://flatiron-random-integer.example.com").
-  then(response => parseInt(response.text())).
-  then(newInt => addends.push(newInt));
+fetch("http://flatiron-random-integer.example.com")
+  .then(response => parseInt(response.text()))
+  .then(newInt => addends.push(newInt));
 
-fetch("http://flatiron-random-integer.example.com").
-  then(response => parseInt(response.text())).
-  then(newInt => addends.push(newInt));
+fetch("http://flatiron-random-integer.example.com")
+  .then(response => parseInt(response.text()))
+  .then(newInt => addends.push(newInt));
 
 var sum =  addends[0] + addends[1];
 console.log(sum);
