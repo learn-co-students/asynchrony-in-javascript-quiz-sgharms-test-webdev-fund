@@ -1,4 +1,4 @@
-# Quiz: Variables and Scope in Ruby
+# Quiz: Asynchrony in JavaScript
 
 ## Introduction
 
