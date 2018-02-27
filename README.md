@@ -107,9 +107,10 @@ fetch("http://flatiron-random-integer.example.com")
   .then(response => parseInt(response.text()))
   .then(newInt => addends.push(newInt));
 
-var sum =  addends[0] + addends[1];
-console.log(sum);
-
+setTimeout(() => {
+   var sum = addends[0] + addends[1];
+   console.log(sum);
+}, 500)
 ```
 
 ( ) 5
