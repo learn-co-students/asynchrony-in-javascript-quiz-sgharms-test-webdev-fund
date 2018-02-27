@@ -49,7 +49,7 @@ response is received and handled.
 (X) True
 ( ) False
 
-?: Given that `setTimeout` takes a function and a time (in milliseconds) as arguments (`setTimeout(fn, time)`, what is the expected output of this code (output lines have been collapsed):
+?: Given that `setTimeout` takes a function and a time (in milliseconds) as arguments (`setTimeout(fn, time)`), what is the expected output of this code (output lines have been collapsed):
 
 ```javascript
 setTimeout(() => console.log("Hello"), 5);
@@ -61,7 +61,7 @@ console.log("World");
 ( ) Trick Question: `setTimeout` "steals" the output filehandle
 ( ) Hello Hello Hello Hello Hello World
 
-?: Given that `setTimeout` takes a function and a time (in milliseconds) as arguments (`setTimeout(fn, time)`, what is the expected output of this code (output lines have been collapsed):
+?: Given that `setTimeout` takes a function and a time (in milliseconds) as arguments (`setTimeout(fn, time)`), what is the expected output of this code (output lines have been collapsed):
 
 ```javascript
 setTimeout(() => console.log("Hello"), 0);
@@ -73,26 +73,25 @@ console.log("World");
 (X) World Hello
 ( ) World
 
-?: What is the expected output of this command? Assume the server returns a
-random name chosen from the Flatiron Baby Name book Assume that the API returns
+?: What is the expected output of this command? Assume the server returns
 `{"name": "Byron"}`:
 
 ```javascript
-var baby_name;
+var babyName;
 
 fetch("http://flatiron-baby-name.example.com")
   .then(response => response.json())
-  .then(data => baby_name = data.name);
+  .then(data => babyName = data.name);
 
 
-console.log(`I've named my kid, ${baby_name}`);
+console.log(`I've named my kid, ${babyName}`);
 
 ```
 
 (X) I've named my kid, undefined
 ( ) I've named my kid, Byron
 ( ) This code will not work
-( ) `baby_name` will be updated in a parallel thread
+( ) `babyName` will be updated in a parallel thread
 
 ?: What is the expected output of this command? Assume the server returns a
 random Integer. On this particular run it will return `2` and `3`.
